@@ -1,4 +1,4 @@
-require([], function(){
+require(["sample"], function(sample){
 	// Test that jQuery is loaded
 	$('.target').html('jQuery is working <br>');
 
@@ -10,4 +10,7 @@ require([], function(){
     // Test that Backbone is working
     var model = new Backbone.Model({isWorking: 'working'});
     $('.target').append('Backbone is ' + model.get('isWorking'));
+
+    // Test a sample module load
+    sample.tryMe();
 });
